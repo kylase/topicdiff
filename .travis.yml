@@ -5,6 +5,7 @@ python:
 install:
   - pip install -r requirements/dev.txt
 before_script:
-  - export APP_SECRET="development_secret"
+  - export APP_SECRET="test_secret"
+  - export FLASK_ENV=test
 script:
   - pytest
