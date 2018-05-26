@@ -7,5 +7,6 @@ CONFIG = DevelopmentConfig if get_debug_flag() else ProductionConfig
 
 app = create_app(CONFIG)
 
-app.run(host=os.getenv('HOST', default='0.0.0.0'), 
+if __name__ == '__main__':
+    app.run(host=os.getenv('HOST', default='0.0.0.0'), 
         port=int(os.getenv('PORT', default='5000')))
