@@ -4,5 +4,7 @@ python:
   - 3.6
 install:
   - pip install -r requirements/dev.txt
+before_script:
+  - export APP_SECRET="development_secret"
 script:
   - pytest
