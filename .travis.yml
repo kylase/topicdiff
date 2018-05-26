@@ -1,5 +1,17 @@
 language: python
+cache: pip
 python:
-  - "3.6"
+  - 3.6
 install:
-  - pip install -r requirements.txt
+  - pip install -r requirements/dev.txt
+before_script:
+  - export APP_SECRET="test_secret"
+  - export FLASK_ENV=test
+script:
+  - pytest
+deploy:
+  provider: heroku
+  app: cs-topic-app
+  api_key: 
+    secure: "quNFpOiddWLUTzKExF8Dli8/EAlBDON31I/ue2OIBJ7Tc559HPliWqQl5zKwW/AaUEqV0rH72lNCtfYgHkOGlMqlboF2vxCVXCRF42JoUO1skpp+0LQH3fVKTZ3mFKvHi8LgtiS+mpN+IVCqrczm/qjwkbI7dJOCV8nbjR+W9oeUj65L9d5HH5GUak4lpt95HKjQracy5pMMUu3U5KCyKK0hiDER6Ve+rrdZPwWt9QczBIo5T9IxBd0VtPs8cJnx7ThVmbEDKtbv8NzWmbrzCtgfVMMbO491JPLtkCreIqdphzvc7pq7bdNcbhoaCJpOLOKysG8Cz2CvPoKliLSc0YMom3V73A1BVgn4IANqpEYevlOsxqV1CSF1ahh+wzEMv/XYZawO+908NAatbps6Zv8cWH0dS2RIscB5290G/K6g7eqZA9a1g1ouHLGKDe5/sEKAR/csX2Eqy27X0692f12hPBBkETHlX8Byz3B4v1wVd5NX1qP5YdyPNSdJTNu359XqSCV237WNOc8BCPmkUszjn64J5KW/l8Os9c859n+N/tqTK0BvNkndeNgyLqX2hi0RMZ3nFUQRouqqM4KIqLWb1yrTMtOl1MDqPW+ouRP/kEb0o9C8kwTup1Kr+097R//JF/5FGq9d/xHksN2gxuKRcwe6rMgh3olrv7NCm9A="
+  on: master
