@@ -9,4 +9,4 @@ app = create_app(CONFIG)
 
 if __name__ == '__main__':
     app.run(host=os.getenv('HOST', default='0.0.0.0'), 
-        port=int(os.getenv('PORT', default='5000')))
+            port=int(os.getenv('PORT', default='5000')))
