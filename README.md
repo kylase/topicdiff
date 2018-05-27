@@ -6,11 +6,11 @@
 
 ### Windows Powershell
 
-$env:FLASK_APP = "run.py"
+`$env:FLASK_APP = "run.py"`
 
 ### *Unix
 
-export FLASK_APP="run.py"
+`export FLASK_APP="run.py"`
 
 ## Objective 
 
