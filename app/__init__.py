@@ -1,9 +1,15 @@
-from flask import Flask, render_template
+from flask import Flask, Blueprint, render_template
+from flask_restful import Api
+from app.resources.documents import Compare
 
 def create_app(config):
     app = Flask(__name__)
-
     app.config.from_object(config)
+
+    api_bp = Blueprint('api', __name__)
+    api = Api(api_bp)
+    api.add_resource(Compare, '/api/documents/compare')
+    app.register_blueprint(api_bp)
 
     @app.errorhandler(404)
     def not_found(error):
