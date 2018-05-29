@@ -1,0 +1,53 @@
+main {
+    padding-top: 80px;
+}
+
+textarea.right {
+    border: 1px solid #007bff;
+}
+
+textarea.left {
+    border: 2px solid #dc3545;
+}
+
+.viz {
+    padding-top: 20px;
+}
+
+.topic-label {
+    text-anchor: middle;
+    fill: white;
+}
+
+.topic-label-box {
+    stroke: rgb(0, 0, 0);
+    stroke-width: 0px;
+}
+
+.left {
+    stroke: #dc3545;
+    font-weight: bold;
+    color: #dc3545;
+    fill: #dc3545;
+}
+
+.right {
+    stroke: #007bff;
+    color: #007bff;
+    fill: #007bff;
+}
+
+.both {
+    stroke: #563d7c;
+    font-weight: bold;
+    color: #563d7c;
+    fill: #563d7c;
+}
+
+rect:hover {
+    stroke-width: 3px;
+}
+
+text {
+    font-family: Consolas, Monaco, monospace;
+}
