@@ -8,7 +8,7 @@ from app.common.topic_model import TopicModelPipeline
 
 def test_load_models(app):
     MODELS_DIR = app.config.get('MODELS_DIR')
-    MODEL_TYPE = 'wiki'
+    MODEL_TYPE = 'wikipedia'
     model_files = {
         'tf': os.path.join(MODELS_DIR, MODEL_TYPE, 'tf'),
         'lda': os.path.join(MODELS_DIR, MODEL_TYPE, 'lda')
@@ -21,7 +21,7 @@ def test_load_models(app):
         
 def test_pipeline_infer(app):
     MODELS_DIR = app.config.get('MODELS_DIR')
-    MODEL_TYPE = 'wiki'
+    MODEL_TYPE = 'wikipedia'
     model_files = {
         'tf': os.path.join(MODELS_DIR, MODEL_TYPE, 'tf'),
         'lda': os.path.join(MODELS_DIR, MODEL_TYPE, 'lda')

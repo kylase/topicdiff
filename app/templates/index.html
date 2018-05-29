@@ -1,9 +1,29 @@
 {% extends "base.html" %}
-
-{% block title %}
-Topic Model Application
-{% endblock %}
+{% block head %}<script src="https://d3js.org/d3.v5.min.js"></script>{% endblock %}
+{% block title %} TopicDiff: a web application for topic model visualisation {% endblock %}
 
 {% block body %}
-<h1>Hello World</h1>
+<h2>
+    <strong>TopicDiff</strong> allows you to visualise the difference in topic coverage of the content
+</h2>
+<form id="topicdiff">
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <label for="content_1">You can submit one...</label>
+                <textarea class="form-control is-invalid" name="content" id="1" rows="10" placeholder="Enter the text of the content."></textarea>
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-group">
+                <label for="content_2">Or you can submit another to compare them</label>
+                <textarea class="form-control right" name="content" id="2" rows="10" placeholder="Enter text of another content if you want to compare."></textarea>
+            </div>
+        </div>
+    </div>
+<button type="submit" class="btn btn-primary btn-dark btn-lg btn-block">Submit and look at the results below</button>
+</form>
+<div class="viz"></div>
+<script type=text/javascript src="{{url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
+<script type=text/javascript src="{{url_for('static', filename='js/app.js') }}"></script>
 {% endblock %}

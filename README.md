@@ -1,4 +1,4 @@
-# Topic Model Application
+# TopicDiff Visualisation Application
 
 [![Build Status](https://travis-ci.com/kylase/cs-topic-app.svg?token=uVsTSLyLLpWLUJnmWAEA&branch=master)](https://travis-ci.com/kylase/cs-topic-app)
 
@@ -6,11 +6,15 @@
 
 ### Windows Powershell
 
-$env:FLASK_APP = "run.py"
+`$env:FLASK_APP = "run.py"`
 
-### *Unix
+For development: `$env:FLASK_ENV = "development"`
 
-export FLASK_APP="run.py"
+### Linux/macOS
+
+`export FLASK_APP="run.py"`
+
+For development: `export FLASK_APP="development"`
 
 ## Objective 
 
@@ -26,4 +30,16 @@ The topic model is trained with the [Wikipedia's page dumps](https://dumps.wikim
 
 The web application is built with Python. 
 
-[Flask](http://flask.pocoo.org/) is used as the back-end framework to serve the data and logic. 
+[Flask](http://flask.pocoo.org/) is used as the back-end framework to handle the processing logic and to serve the data.
+
+[jQuery](https://jquery.com/), [d3](https://d3js.org/), [Bootstrap](https://getbootstrap.com/) are used for the front-end design.
+
+## API
+
+**POST** `/api/documents/compare`
+
+### Parameters
+
+- `content` (*string*): 1 or more `content` is needed to show the topic cloud
+- `model` (*string*): Only `wikipedia` is the valid value
+- `threshold` (*float): Topics with score below the threshold will not be shown
