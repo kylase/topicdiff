@@ -12,6 +12,10 @@ class TopicModelPipeline:
 
     def infer(self, text):
         """
+        First, convert text to vector using gensim's Dictionary doc2bow after simple
+        sanitisation.
+
+        Return the inferred topics
         """
         tf = self.tf.doc2bow(self._sanitize(text))
 
