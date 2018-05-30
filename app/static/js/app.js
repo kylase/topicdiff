@@ -38,7 +38,7 @@
             console.log(err);
         }).then((response) => {
             $(".viz").prepend(
-                "<h3>Topic Cloud based on model trained using <mark>" + response.model.name + "</mark> with <mark>" + response.model.total_topics + "</mark> topics </h3>" +
+                '<h3>Topic Cloud <small class="text-muted"> based on model trained using <mark>' + response.model.name + '</mark> with <mark>' + response.model.total_topics + '</mark> topics that have at least <mark>' + response.model.threshold * 100 + '%</mark> association</small></h3>' +
                 '<p>Topics with <span class="both">purple</span> shade means they are common to both documents. ' +
                 'Topics with <span class="left">red</span> and <span class="right">blue</span> shade means they are exclusive to each respective document (denoted by the colour of the border of the text boxes).</p>'
             );
