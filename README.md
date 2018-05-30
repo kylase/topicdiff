@@ -36,10 +36,4 @@ The web application is built with Python.
 
 ## API
 
-**POST** `/api/documents/compare`
-
-### Parameters
-
-- `content` (*string*): 1 or more `content` is needed to show the topic cloud
-- `model` (*string*): Only `wikipedia` is the valid value
-- `threshold` (*float): Topics with score below the threshold will not be shown
+Refer to the [Swagger](https://cs-topic-app.herokuapp.com/api/docs/) for the API reference.
