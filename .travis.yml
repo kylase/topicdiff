@@ -1,17 +1,17 @@
 language: python
 cache: pip
 python:
-  - 3.6
+- 3.6
 install:
-  - pip install -r requirements/dev.txt
+- pip install -r requirements/dev.txt
 before_script:
-  - export APP_SECRET="test_secret"
-  - export FLASK_ENV=test
+- export APP_SECRET="test_secret"
+- export FLASK_ENV=test
 script:
-  - pytest
+- pytest
 deploy:
   provider: heroku
   app: cs-topic-app
-  api_key: 
-    secure: "quNFpOiddWLUTzKExF8Dli8/EAlBDON31I/ue2OIBJ7Tc559HPliWqQl5zKwW/AaUEqV0rH72lNCtfYgHkOGlMqlboF2vxCVXCRF42JoUO1skpp+0LQH3fVKTZ3mFKvHi8LgtiS+mpN+IVCqrczm/qjwkbI7dJOCV8nbjR+W9oeUj65L9d5HH5GUak4lpt95HKjQracy5pMMUu3U5KCyKK0hiDER6Ve+rrdZPwWt9QczBIo5T9IxBd0VtPs8cJnx7ThVmbEDKtbv8NzWmbrzCtgfVMMbO491JPLtkCreIqdphzvc7pq7bdNcbhoaCJpOLOKysG8Cz2CvPoKliLSc0YMom3V73A1BVgn4IANqpEYevlOsxqV1CSF1ahh+wzEMv/XYZawO+908NAatbps6Zv8cWH0dS2RIscB5290G/K6g7eqZA9a1g1ouHLGKDe5/sEKAR/csX2Eqy27X0692f12hPBBkETHlX8Byz3B4v1wVd5NX1qP5YdyPNSdJTNu359XqSCV237WNOc8BCPmkUszjn64J5KW/l8Os9c859n+N/tqTK0BvNkndeNgyLqX2hi0RMZ3nFUQRouqqM4KIqLWb1yrTMtOl1MDqPW+ouRP/kEb0o9C8kwTup1Kr+097R//JF/5FGq9d/xHksN2gxuKRcwe6rMgh3olrv7NCm9A="
+  api_key:
+    secure: WeC8Z21P/FtpKfBe5LWjqEx4UiKi9GQ+WS+IlX2UMECw0lnbweJ/Zj5kEKbE1NhubLAIfsz746edw0bKzy4fUncLGtPtppbaxHygU9V70o9kgpQgGRe1Nx02hA+nIyhoBV2Y80HBWHfvXi6xuDSd+yTvGn7FxLYkjWC7dCvKJ6mH0edanqn8UWTDj5VwAJjUSyJ10pauvukZTlHZXixOHH0kdwTmxVjI+7GaByviyEhVhRjwaiybRFQTnT6H6TOQ2lWMJvvt5iYtHDXZ3zx3OAlC7JPFhns0rP+pQWWL2eNVbsjrpopy+SHMEdL6aDhPB6N9LzgBQu0dVn8l5amwnvNLE07br9Una5NXBw7OmQlqaTA7LxMEhATTh1DrXKTxav1r+uhE35wx4XifTG68Vz/ZyvauU44rJBE9Bj2a/b3QDIfUTDw5eqiJY3KW55BlvEpz18AsSg1dVAZerkDqkzh0SNWpzoG397IXWhVHFQaoH2QjpoM85keEOZO6PE7cS9IuXOS1enAFrS42gLRufTUSQwI5N0h4Hfvgv5aaM+HeYA+Ji2ra9O5xYVzH6pV1N4yyCJ809Z7NsypXlor0wakBJk2Uz6dKJ1EbB5bXjHJN+vnaBsKAqfufqHyK4QTrtiRfjtH382C86AwWE8Mv20eY9LiRns2tjoCYuATzVQk=
   on: master
