@@ -1,6 +1,6 @@
 # TopicDiff Visualisation Application
 
-[![Build Status](https://travis-ci.com/kylase/cs-topic-app.svg?token=uVsTSLyLLpWLUJnmWAEA&branch=master)](https://travis-ci.com/kylase/cs-topic-app)
+[![Build Status](https://travis-ci.com/kylase/topicdiff.svg?token=uVsTSLyLLpWLUJnmWAEA&branch=master)](https://travis-ci.com/kylase/topicdiff)
 
 ## Instructions
 
@@ -16,7 +16,7 @@ For development: `$env:FLASK_ENV = "development"`
 
 For development: `export FLASK_APP="development"`
 
-## Objective 
+## Objective
 
 The main objective of this web application is to visualise how 2 documents are similar in terms of the topics that they cover using a topic model.
 
@@ -28,7 +28,7 @@ The topic model is trained with the [Wikipedia's page dumps](https://dumps.wikim
 
 ### Web Application
 
-The web application is built with Python. 
+The web application is built with Python.
 
 [Flask](http://flask.pocoo.org/) is used as the back-end framework to handle the processing logic and to serve the data.
 
@@ -36,4 +36,4 @@ The web application is built with Python.
 
 ## API
 
-Refer to the [Swagger](https://cs-topic-app.herokuapp.com/api/docs/) for the API reference.
+Refer to the [Swagger](https://topicdiff.herokuapp.com/api/docs/) for the API reference.
