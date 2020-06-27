@@ -4,4 +4,4 @@ def test_swagger(client):
     assert client.get('/api/swagger.json').status_code == 200
 
 def test_api_documentation(client):
-    assert client.get('/api/docs').status_code == 301
+    assert client.get('/api/docs').status_code == 308
