@@ -4,4 +4,4 @@ gensim==3.4.0
 flask_restful==0.3.6
 flask-restful-swagger-2==0.35
 flask-swagger-ui==3.6.0
-raven[flask]==6.9.0
+sentry-sdk[flask]==0.15.1

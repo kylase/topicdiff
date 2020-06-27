@@ -1,14 +1,20 @@
 import os
+import sentry_sdk
+
 from flask.helpers import get_debug_flag
-from raven.contrib.flask import Sentry
+from sentry_sdk.integrations.flask import FlaskIntegration
+
 from app import create_app
 from app.settings import ProductionConfig, DevelopmentConfig
 
 CONFIG = DevelopmentConfig if get_debug_flag() else ProductionConfig
 
-app = create_app(CONFIG)
+sentry_sdk.init(
+    dsn=os.getenv('SENTRY_DSN'),
+    integrations=[FlaskIntegration()]
+)
 
-sentry = Sentry(app)
+app = create_app(CONFIG)
 
 if __name__ == '__main__':
     app.run(host=os.getenv('HOST', default='0.0.0.0'),
