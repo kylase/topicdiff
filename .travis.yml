@@ -1,7 +1,7 @@
 language: python
 cache: pip
 python:
-- 3.6
+- 3.9
 install:
 - pip install -r requirements/dev.txt
 before_script:
