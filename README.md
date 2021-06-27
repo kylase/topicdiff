@@ -1,10 +1,10 @@
 # TopicDiff Visualisation Application
 
-[![Build Status](https://travis-ci.com/kylase/topicdiff.svg?token=uVsTSLyLLpWLUJnmWAEA&branch=master)](https://travis-ci.com/kylase/topicdiff)
+![Main](https://github.com/github/docs/actions/workflows/test-and-deploy.yml/badge.svg)
 
 ## Instructions
 
-### Windows Powershell
+### Windows PowerShell
 
 `$env:FLASK_APP = "run.py"`
 
