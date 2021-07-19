@@ -12,7 +12,8 @@ CONFIG = DevelopmentConfig if get_debug_flag() else ProductionConfig
 sentry_sdk.init(
     dsn=os.getenv('SENTRY_DSN'),
     integrations=[FlaskIntegration()],
-    traces_sample_rate=1.0
+    traces_sample_rate=1.0,
+    environment=os.getenv("FLASK_ENV")
 )
 
 app = create_app(CONFIG)
