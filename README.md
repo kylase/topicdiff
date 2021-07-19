@@ -1,6 +1,6 @@
 # TopicDiff Visualisation Application
 
-![Main](https://github.com/github/docs/actions/workflows/test-and-deploy.yml/badge.svg)
+![Test and Deploy on Heroku](https://github.com/kylase/topicdiff/actions/workflows/test-and-deploy.yml/badge.svg)
 
 ## Instructions
 
